@@ -1,4 +1,3 @@
-
 class Creature:
     def __init__(self, type_of_creature, friendly, position, image):
         # type_of_creature is a short string
@@ -86,8 +85,14 @@ class OrcBoss(Orc):
     def set_special_move(self, special_move):
         self.special_move = special_move
 
+    def get_name(self):
+        return self.name
+
+    def get_special_move(self):
+        return self.special_move
+
     def __str__(self):
-        return f"{self.name} is an Orc bosss with {self.special_move} as a special move.\n" + Orc.__str__(self)
+        return f"{self.name} is an Orc boss with {self.special_move} as a special move.\n" + Orc.__str__(self)
 
 
 creature = Creature("rabbit", True, (10, 250, 10), "bunny.gif")
